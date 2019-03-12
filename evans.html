@@ -104,7 +104,9 @@ small {
       <li><button onclick=appetizers()>appetizers</button></li>
       <li><button onclick=entrees()>entrees</button></li>
       <li><button onclick=desserts()>desserts</button></li>
+      <li><button onclick=snacks()>snacks</button></li>
     </ul>
+    
     
 <h1>Evan's restaurant</h1>
 <h2>a New York City eatery</h2>
@@ -127,6 +129,11 @@ appetizersImages = [
       'url("https://cdn.vox-cdn.com/thumbor/HI1NAreNixjMK6YfM6c2-eIIFc8=/0x0:6000x3376/1200x800/filters:focal(2520x1208:3480x2168)/cdn.vox-cdn.com/uploads/chorus_image/image/58955517/DSCF0792.0.jpg")',
     'url("https://www.spendwithpennies.com/wp-content/uploads/2017/06/Patriotic-4th-July-Jelly-3.jpg")',
     ]
+    snacksImages = [
+      'url(https://images-na.ssl-images-amazon.com/images/I/81TLFU5Yj6L._SY550_.jpg")',
+      'url(https://www.wisesnacks.com/wp-content/uploads/2016/04/hbbq_no_wt_11.png)',
+      ]
+    
 appetizersDivs = [ 
   '<div class="item"><p>Spicy Sausage and Bacon Appetizers <span class="price">$3</span><br /> <small>Its small,some little sasuages and bacon on top.</small></p> </div>',
   
@@ -148,7 +155,9 @@ appetizersDivs = [
   
   '<div class="item"><p>jelu <span class="price">$3</span><br /> <small>jelu with cream on top.</small></p> </div>',
     ]
-
+    snacksDivs = [
+   '<div class="item"><p>Lays potato chips<span class="price">$1</span><br /><small>Made with three simple ingredients: potatoes, oil and salt.</small></p></div>',
+    '<div class="item"><p>flavored potato chips<span class="price">$1</span><br /><small>zesty BBQ with a touch of sweet honey, you get a flavor.</small></p></div>',
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
   });
@@ -191,9 +200,20 @@ appetizersDivs = [
     for (i=0; i<3; i=i+1) {
 		items[i].style.background = dessertsImages[i]
 		items[i].style.backgroundSize = '100% 100%'
+		
 }  
 
   }
+  function snacks() {
+  //alert("snacks") 
+  	food.innerHTML = '' 
+	  food.innerHTML += snacksDivs[0]
+    food.innerHTML += snacksDivs[1]
+    food.innerHTML += snacksDivs[2]
+    items = document.getElementsByClassName("item")
+    for (i=0; i<3; i=i+1) {
+		items[i].style.background = snacksImages[i]
+		items[i].style.backgroundSize = '100% 100%'
 </script>
 
 </body>
