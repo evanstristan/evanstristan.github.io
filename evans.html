@@ -11,7 +11,7 @@ body {
   background: #232323;
 }
 div {
-  height: 300px;
+  height: 350px;
   background-size: cover;
   position: relative;
   margin: 40px 0 0 0;
@@ -105,9 +105,8 @@ small {
       <li><button onclick=appetizers()>appetizers</button></li>
       <li><button onclick=entrees()>entrees</button></li>
       <li><button onclick=desserts()>desserts</button></li>
-      <li><button onclick=snacks()>snacks</button></li>
+       <li><button onclick=snacks()>snacks</button></li>
     </ul>
-    
     
 <h1>Evan's restaurant</h1>
 <h2>a New York City eatery</h2>
@@ -122,43 +121,54 @@ appetizersImages = [
   ]
   entreesImages = [
     'url("https://logansinthecarolinas.com/images/gallery/ChickSeafood/shrimpentree_pop.jpg")',
-    'url("https://www.perkinsrestaurants.com/wp-content/uploads/2016/02/lunch_forkWorthy_chickStrips_detail-1.jpg")',
-    'url("https://www.jimsrestaurants.com/sites/default/files/styles/featured_menu_item/public/menu-item-photo/2017-05/Steak%20and%20Fried%20Shrimp.jpg?itok=N0AAUFgC")',
+    'url("https://www.perkinsrestaurants.com/wp-content/uploads/2016/02/lunch_forkWorthy_chickStrips_detail-1.jpg")',                   'url("https://www.jimsrestaurants.com/sites/default/files/styles/featured_menu_item/public/menu-item-photo/2017-05/Steak%20and%20Fried%20Shrimp.jpg?itok=N0AAUFgC")',
+    'url("https://www.beefobradys.com/images/entrees-grilled-shrimp.jpg")',
+'url("https://www.vegetariantimes.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTQ3MDM4NTA3OTA1MzI4ODc5/gyros2_2000_1125.jpg")',
     ]
     dessertsImages = [
       'url("https://www.fifteenspatulas.com/wp-content/uploads/2015/12/Oreo-Truffles-Recipe-fifteenspatulas2-640x427.jpg")',
       'url("https://cdn.vox-cdn.com/thumbor/HI1NAreNixjMK6YfM6c2-eIIFc8=/0x0:6000x3376/1200x800/filters:focal(2520x1208:3480x2168)/cdn.vox-cdn.com/uploads/chorus_image/image/58955517/DSCF0792.0.jpg")',
     'url("https://www.spendwithpennies.com/wp-content/uploads/2017/06/Patriotic-4th-July-Jelly-3.jpg")',
+    'url("https://images-gmi-pmc.edge-generalmills.com/7c1096c7-bfd0-4806-a794-1d3001fe0063.jpg")',
     ]
     snacksImages = [
-      'url(https://images-na.ssl-images-amazon.com/images/I/81TLFU5Yj6L._SY550_.jpg")',
-      'url(https://www.wisesnacks.com/wp-content/uploads/2016/04/hbbq_no_wt_11.png)',
-      ]
-    
+'url("https://images-na.ssl-images-amazon.com/images/I/81TLFU5Yj6L._SY550_.jpg")',
+ 'url(https://www.wisesnacks.com/wp-content/uploads/2016/04/hbbq_no_wt_11.png)',
+ ]
 appetizersDivs = [ 
-  '<div class="item"><p>Spicy Sausage and Bacon Appetizers <span class="price">$3</span><br /> <small>Its small,some little sasuages and bacon on top.</small></p> </div>',
+  '<div class="item" onclick=this.classList.toggle("show-description")><p>Spicy Sausage and Bacon Appetizers <span class="price">$3</span><br /> <small>Its small,some little sasuages and bacon on top.</small></p> </div>',
   
-  '<div class="item"><p>Mini Spaghetti and Meatball Appetizer <span class="price">$2</span><br /> <small>perfectly satisfying bites made with creamy Alfredo pasta and Italian-style meatballs. </small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>Mini Spaghetti and Meatball Appetizer <span class="price">$2</span><br /> <small>perfectly satisfying bites made with creamy Alfredo pasta and Italian-style meatballs. </small></p> </div>',
   
-  '<div class="item"><p>ricotta and prosciutto cracker appetizers<class="price">$1</span><br /> <small>creamy,ricotta prosciutto and a light honey drizzle over every cracker</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>ricotta and prosciutto cracker appetizers<class="price">$1</span><br /> <small>creamy,ricotta prosciutto and a light honey drizzle over every cracker</small></p> </div>',
     ]
     entreesDivs = [ 
-  '<div class="item"><p>chicken and seafood <span class="price">$10</span><br /> <small>fried srimp with broccoli and sauce at the side</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>chicken and seafood <span class="price">$10</span><br /> <small>fried srimp with broccoli and sauce at the side</small></p> </div>',
   
-  '<div class="item"><p>chicken strips<span class="price">$14</span><br /> <small>chicken strips with potato salad at the side</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>chicken strips<span class="price">$14</span><br /> <small>chicken strips with potato salad at the side</small></p> </div>',
   
-  '<div class="item"><p>stake with shrimp<span class="price">$16</span><br /> <small>stake with fried shrimp and broccoli</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>stake with shrimp<span class="price">$16</span><br /> <small>stake with fried shrimp and broccoli</small></p> </div>',
+        
+        '<div class="item"onclick=this.classList.toggle("show-description")><p>chicken and seafood <span class="price">$10</span><br /> <small>fried srimp with broccoli and sauce at the side</small></p> </div>',
+        
+        '<div class="item"onclick=this.classList.toggle("show-description")><p>Zucchini Fritter Gyros <span class="price">$11</span><br /> <small>Crispy zucchini fritters get the gyro treatment with hummus and a lemony yogurt sauce.</small></p> </div>',
     ]
     dessertsDivs = [ 
-  '<div class="item"><p>sweet colorful donuts <span class="price">$2</span><br /> <small>sweet donuts with cream inside.</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>sweet colorful donuts <span class="price">$2</span><br /> <small>sweet donuts with cream inside.</small></p> </div>',
   
-  '<div class="item"><p>rainbow cake <span class="price">$14</span><br /> <small>a mixture of choclate and icening inside.</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>rainbow cake <span class="price">$14</span><br /> <small>a mixture of choclate and icening inside.</small></p> </div>',
   
-  '<div class="item"><p>jelu <span class="price">$3</span><br /> <small>jelu with cream on top.</small></p> </div>',
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>jelu <span class="price">$3</span><br /> <small>jelu with cream on top.</small></p> </div>',
+        
+  '<div class="item"onclick=this.classList.toggle("show-description")><p>Fudge Ice-Cream Dessert <span class="price">$4</span><br /> <small>cookies and cake in one with this decadent fudge-filled treat. With Betty Crocker™.</small></p> </div>',
+        
     ]
     snacksDivs = [
-   '<div class="item"><p>Lays potato chips<span class="price">$1</span><br /><small>Made with three simple ingredients: potatoes, oil and salt.</small></p></div>',
-    '<div class="item"><p>flavored potato chips<span class="price">$1</span><br /><small>zesty BBQ with a touch of sweet honey, you get a flavor.</small></p></div>',
+       '<div class="item"onclick=this.classList.toggle("show-description")><p>Lays potato chips<span class="price">$1</span><br /><small>Made with three simple ingredients: potatoes, oil and salt.</small></p></div>',
+        '<div class="item"onclick=this.classList.toggle("show-description")><p>flavored potato chips<span class="price">$1</span><br /><small>zesty BBQ with a touch of sweet honey, you get a flavor.</small></p></div>',
+        ]
+
+
   $('div').on('click', function() {
       $(this).toggleClass('show-description');
   });
@@ -178,13 +188,15 @@ appetizersDivs = [
 }
   function entrees() {
   //alert("entrees") 
-  food = document.getElementById("toys")
+    food = document.getElementById("toys")
   	food.innerHTML = '' 
-	  food.innerHTML += entreesDivs[0]
+	food.innerHTML += entreesDivs[0]
     food.innerHTML += entreesDivs[1]
     food.innerHTML += entreesDivs[2]
+    food.innerHTML += entreesDivs[3]
+    food.innerHTML += entreesDivs[4]
     items = document.getElementsByClassName("item")
-    for (i=0; i<3; i=i+1) {
+    for (i=0; i<5; i=i+1) {
 		items[i].style.background = entreesImages[i]
 		items[i].style.backgroundSize = '100% 100%'
 		
@@ -193,28 +205,32 @@ appetizersDivs = [
 
   function desserts() {
   //alert("desserts") 
+    food = document.getElementById("toys")
   	food.innerHTML = '' 
-	  food.innerHTML += dessertsDivs[0]
+	food.innerHTML += dessertsDivs[0]
     food.innerHTML += dessertsDivs[1]
     food.innerHTML += dessertsDivs[2]
+    food.innerHTML += dessertsDivs[3]
     items = document.getElementsByClassName("item")
-    for (i=0; i<3; i=i+1) {
+    for (i=0; i<4; i=i+1) {
 		items[i].style.background = dessertsImages[i]
 		items[i].style.backgroundSize = '100% 100%'
-		
 }  
 
   }
   function snacks() {
-  //alert("snacks") 
-  	food.innerHTML = '' 
-	  food.innerHTML += snacksDivs[0]
+    //alert("snacks") 
+    food = document.getElementById("toys")
+    food.innerHTML = '' 
+  	food.innerHTML += snacksDivs[0]
     food.innerHTML += snacksDivs[1]
-    food.innerHTML += snacksDivs[2]
     items = document.getElementsByClassName("item")
-    for (i=0; i<3; i=i+1) {
-		items[i].style.background = snacksImages[i]
-		items[i].style.backgroundSize = '100% 100%'
+      for (i=0; i<2; i=i+1) {
+  		items[i].style.background = snacksImages[i]
+  		items[i].style.backgroundSize = '100% 100%'
+      }
+  }
+          
 </script>
 
 </body>
